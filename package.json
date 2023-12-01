@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "bun run prep:prod && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prep:prod":"bunx prisma migrate dev"
   },
   "dependencies": {
     "@auth/core": "0.18.1",
